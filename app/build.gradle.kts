@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("maven-publish")
 }
 
 
@@ -61,7 +62,7 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(project(":flutter_module_library"))
+//    implementation(project(":flutter_module_library"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -82,11 +83,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // BioMetric
-    implementation (libs.androidx.biometric)
+    implementation(libs.androidx.biometric)
 
     // Hilt
 //    implementation (libs.androidx.hilt.lifecycle.viewmodel)
-    implementation (libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-android-compiler:2.49")
@@ -100,11 +101,15 @@ dependencies {
 //    releaseImplementation ("com.salespandadm.app:flutter_release:1.0")
 
 
+//    implementation ("com.github.gohil-rahul-tft:flutter-module-library:1.0.0")
 
-//    debugImplementation ("com.example.my_flutter_module:flutter_debug:1.0")
-//    releaseImplementation ("com.example.my_flutter_module:flutter_release:1.0")
+
+//    debugImplementation("com.example.my_flutter_module:flutter_debug:1.0")
+//    implementation("com.example.my_flutter_module:flutter_release:1.0")
 
 //    debugImplementation 'com.example.my_flutter_module:flutter_debug:1.0'
 //    profileImplementation 'com.example.my_flutter_module:flutter_profile:1.0'
 //    releaseImplementation 'com.example.my_flutter_module:flutter_release:1.0'
 }
+
+

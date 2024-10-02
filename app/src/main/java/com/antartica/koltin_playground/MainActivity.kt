@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import com.antartica.flutter_module_library.CoolActivity
 import com.antartica.koltin_playground.ui.theme.KoltinPlaygroundTheme
 
 class MainActivity : AppCompatActivity() {
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                         FlutterActivity.createDefaultIntent(this@MainActivity)
                     )*/
 
-                    CoolActivity().hello(context = this@MainActivity)
+//                    CoolActivity().hello(context = this@MainActivity)
 
 //                    FlutterActivity.createDefaultIntent(this@MainActivity)
                 }) {

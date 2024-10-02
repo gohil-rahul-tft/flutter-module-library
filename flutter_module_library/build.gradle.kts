@@ -49,7 +49,7 @@ android {
         }*/
         maven {
             // Local repo containing your AAR files
-            url = uri("$rootDir/libs/repo")
+            url = uri("$rootDir/flutter_module_library/libs/repo")
         }
     }
 }
@@ -70,11 +70,10 @@ publishing {
         create("release", MavenPublication::class) {
             groupId = "com.github.gohil-rahul-tft"
             artifactId = "flutter-module-library"
-            version = "1.0.0"
+            version = "1.0.1"
 
-            afterEvaluate {
-                from(components["release"])
-            }
+            artifact("$rootDir/libs/repo")
         }
     }
+
 }
