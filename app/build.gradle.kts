@@ -61,8 +61,17 @@ android {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+//    implementation(fileTree(mapOf("dir" to "cool", "include" to listOf("*.jar"))))
+    implementation(project(":cool_library"))
+
 //    implementation(project(":flutter_module_library"))
+
+//    implementation(files("${rootDir}/cool/flutter_release-1.0.aar"))
+
+//    implementation("io.flutter:flutter_embedding_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4")
+//    implementation("io.flutter:armeabi_v7a_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4")
+//    implementation("io.flutter:arm64_v8a_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4")
+//    implementation("io.flutter:x86_64_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -105,6 +114,12 @@ dependencies {
 
 
 //    debugImplementation("com.example.my_flutter_module:flutter_debug:1.0")
+
+//    implementation("com.github.gohil-rahul-tft:upload-aar:1.1.1")
+//    implementation("com.github.gohil-rahul-tft:upload-aar:1.2.0")
+
+
+
 //    implementation("com.example.my_flutter_module:flutter_release:1.0")
 
 //    debugImplementation 'com.example.my_flutter_module:flutter_debug:1.0'
