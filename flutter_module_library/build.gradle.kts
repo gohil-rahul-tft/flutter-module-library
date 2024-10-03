@@ -63,9 +63,12 @@ dependencies {
     // Replace with your correct AAR dependencies
 //    debugImplementation("com.example.my_flutter_module:flutter_debug:1.0")
 //    releaseImplementation("com.example.my_flutter_module:flutter_release:1.0")
+    implementation("com.example.my_flutter_module:flutter_release:1.0")
 }
 
-publishing {
+
+
+/*publishing {
     publications {
         create("release", MavenPublication::class) {
             groupId = "com.github.gohil-rahul-tft"
@@ -76,4 +79,15 @@ publishing {
         }
     }
 
+}*/
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            from(components["release"])
+            groupId = "com.github.gohil-rahul-tft"
+            artifactId = "flutter-module-library"
+            version = "1.0.3"
+        }
+    }
 }
